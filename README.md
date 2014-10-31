@@ -1,6 +1,13 @@
 dotfiles
 ========
 
+
+Vim
+=======
+based off the .vimrc by
+ - Amir Salihefendic - http://amix.dk - amix@amix.dk
+More Info can be found [here](https://github.com/amix/vimrc)
+
 The current tools used to set up my personal dotfiles on any new system.
 
 Plugins Used
