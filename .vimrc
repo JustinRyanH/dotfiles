@@ -28,7 +28,8 @@ Bundle 'nsf/gocode'
 Plugin 'fatih/vim-go'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'kien/ctrlp.vim'
-Plugin 'Townk/vim-autoclose'
+Plugin 'kchmck/vim-coffee-script'
+Plugin 'Raimondi/delimitMate'
 
     Bundle 'Shougo/neocomplete.vim'
     
@@ -59,6 +60,13 @@ let g:mapleader = ","
 
 " Fast saving
 nmap <leader>w :w!<cr>
+
+"""""""""""""""""""""""""""""""""""""""""
+" Clor Setting
+"""""""""""""""""""""""""""""""""""""""""
+syntax enable
+set background=dark
+colorscheme solarized
 
 """""""""""""""""""""""""""""""""
 " Go Build Commands
