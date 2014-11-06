@@ -4,3 +4,6 @@
 [submodule "awesome/lian"]
 	path = awesome/lian
 	url = https://github.com/richardhodgson/lian
+[submodule "vim/Vundle.vim"]
+	path = vim/Vundle.vim
+	url = https://github.com/gmarik/Vundle.vim
