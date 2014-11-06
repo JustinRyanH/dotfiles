@@ -30,6 +30,8 @@ Plugin 'altercation/vim-colors-solarized'
 Plugin 'kien/ctrlp.vim'
 Plugin 'kchmck/vim-coffee-script'
 Plugin 'Raimondi/delimitMate'
+Plugin 'godlygeek/tabular'
+Plugin 'plasticboy/vim-markdown'
 
     Bundle 'Shougo/neocomplete.vim'
     
