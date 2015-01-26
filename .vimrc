@@ -32,6 +32,7 @@ Plugin 'kchmck/vim-coffee-script'
 Plugin 'Raimondi/delimitMate'
 Plugin 'godlygeek/tabular'
 Plugin 'plasticboy/vim-markdown'
+Plugin 'scrooloose/nerdtree'
 
     Bundle 'Shougo/neocomplete.vim'
     

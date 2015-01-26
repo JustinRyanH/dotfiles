@@ -1,9 +1,9 @@
 [submodule "lain"]
 	path = lain
 	url = git://github.com/copycat-killer/lain.git
-[submodule "awesome/lian"]
-	path = awesome/lian
-	url = https://github.com/richardhodgson/lian
 [submodule "vim/Vundle.vim"]
 	path = vim/Vundle.vim
 	url = https://github.com/gmarik/Vundle.vim
+[submodule "awesome/lain"]
+	path = awesome/lain
+	url = https://github.com/copycat-killer/lain.git
