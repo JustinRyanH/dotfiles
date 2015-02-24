@@ -306,7 +306,12 @@ globalkeys = awful.util.table.join(
     awful.key({ modkey }, "Left",   awful.tag.viewprev       ),
     awful.key({ modkey }, "Right",  awful.tag.viewnext       ),
     awful.key({ modkey }, "Escape", awful.tag.history.restore),
-
+    awful.key({ modkey }, "Next",  function () awful.client.moveresize( 20,  20, -40, -40) end),
+    awful.key({ modkey }, "Prior", function () awful.client.moveresize(-20, -20,  40,  40) end),
+    awful.key({ modkey, "Control" }, "Left",  function () awful.client.moveresize( 20,  0, -40, 0) end),
+    awful.key({ modkey, "Control" }, "Right", function () awful.client.moveresize(-20, 0,  40,  0) end),
+    awful.key({ modkey, "Control"}, "Up",  function () awful.client.moveresize( 0,  20, -40, 0) end),
+    awful.key({ modkey, "Control" }, "Down", function () awful.client.moveresize(0, -20, 0,  40) end),
     -- Non-empty tag browsing
     -- awful.key({ altkey }, "Left", function () lain.util.tag_view_nonempty(-1) end),
     -- awful.key({ altkey }, "Right", function () lain.util.tag_view_nonempty(1) end),

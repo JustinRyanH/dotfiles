@@ -26,6 +26,7 @@ call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
 Bundle 'nsf/gocode'
 Plugin 'fatih/vim-go'
+Plugin 'airblade/vim-gitgutter'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'kien/ctrlp.vim'
 Plugin 'kchmck/vim-coffee-script'
@@ -69,7 +70,7 @@ nmap <leader>w :w!<cr>
 """""""""""""""""""""""""""""""""""""""""
 syntax enable
 set background=dark
-colorscheme solarized
+colorscheme darkblue
 
 """""""""""""""""""""""""""""""""
 " Go Build Commands
@@ -104,6 +105,7 @@ set noerrorbells
 set novisualbell
 set t_vb=
 set tm=500
+set number
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -135,6 +137,10 @@ set tw=500
 set ai "Auto indent
 set si "Smart indent
 set wrap "Wrap lines
+set colorcolumn=80
+highlight ColorColumn ctermbg=5
+
+
 
 
 """"""""""""""""""""""""""""""
@@ -358,4 +364,18 @@ function! <SID>BufcloseCloseIt()
      execute("bdelete! ".l:currentBufNum)
    endif
 endfunction
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" GitGutter
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+highlight GitGutterAdd term=bold ctermbg=darkgreen ctermfg=black
+highlight GitGutterChange term=bold ctermbg=darkyellow ctermfg=black
+highlight GitGutterDelete term=bold ctermfg=red
+highlight GitGutterChangeDelete term=bold ctermbg=darkyellow ctermfg=black
+
+
+let g:gitgutter_escape_grep = 1
+let g:gitgutter_realtime = 1
+let g:gitgutter_eager = 1
+let g:gitgutter_diff_args = '--patience'
 
