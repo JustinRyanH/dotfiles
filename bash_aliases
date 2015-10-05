@@ -33,3 +33,10 @@ git()
 alias tmux="tmux -2"
 
 export GOPATH=~/.gostuff
+
+# Justin's Aliases
+alias ..="cd ../"
+alias ...="cd ../../"
+alias ....="cd ../../.."
+
+alias ll="ls -alh --color=auto"
