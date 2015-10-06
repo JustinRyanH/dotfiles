@@ -23,7 +23,11 @@ Plugin 'bling/vim-airline'
 Plugin 'majutsushi/tagbar'
 Plugin 'kien/ctrlp.vim'
 Plugin 'scrooloose/nerdtree'
+
+Plugin 'rust-lang/rust.vim'
 Plugin 'racer-rust/vim-racer'
+
+
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -43,6 +47,12 @@ let g:go_highlight_methods = 1
 let g:go_highlight_structs = 1
 let g:go_highlight_operators = 1
 let g:go_highlight_build_constraints = 1
+
+set hidden
+
+let g:racer_cmd = "/home/justin/Tools/racer/target/release/racer"
+let $RUST_SRC_PATH = "/usr/local/src/rust/src"
+au BufRead,BufNewFile *.rs set filetype=rust
 
 source ~/.vimrc.custom
 
