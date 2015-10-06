@@ -1,4 +1,4 @@
-[Forked From onionjake](https://github.com/onionjake)
+[Forked From onionjake](https://github.com/onionjake/dotfiles)
 
 
 Put git author stuff in `~/.gitauthor`
