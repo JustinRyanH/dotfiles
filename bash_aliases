@@ -41,3 +41,5 @@ alias ...="cd ../../"
 alias ....="cd ../../.."
 
 alias ll="ls -alh --color=auto"
+alias pbcopy="xclip -selection clipboard'
+alais pbpaste="xclip -selection clipboard -o'
