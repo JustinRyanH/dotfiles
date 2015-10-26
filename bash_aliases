@@ -9,26 +9,26 @@ then
 fi
 
 # Custom bash prompt via kirsle.net/wizards/ps1.html
-export PS1="[$DISPLAY_HOSTNAME\w]\[$(tput setaf 2)\]\$(__git_ps1 \" (%s)\")\[$(tput sgr0)\]\\$\[$(tput sgr0)\] "
+# export PS1="[$DISPLAY_HOSTNAME\w]\[$(tput setaf 2)\]\$(__git_ps1 \" (%s)\")\[$(tput sgr0)\]\\$\[$(tput sgr0)\] "
+# 
 
-
-# Create a global log of all git commits.
-git() 
-{ 
-  if [[ $1 == "commit" ]]; then 
-    command git "$@" 
-    rc=$?
-    if [[ $rc == 0 ]]; then
-      # Success, add it to the global commit log
-      
-      # TODO: respect git's -C option
-      echo "Commit to $(git rev-parse --show-toplevel) on $(date):" >> ~/.gitcommitlog 
-      cat $(git rev-parse --git-dir)/COMMIT_EDITMSG >> ~/.gitcommitlog
-    fi
-  else 
-    command git "$@"
-  fi
-}
+# # Create a global log of all git commits.
+# git() 
+# { 
+#   if [[ $1 == "commit" ]]; then 
+#     command git "$@" 
+#     rc=$?
+#     if [[ $rc == 0 ]]; then
+#       # Success, add it to the global commit log
+#       
+#       # TODO: respect git's -C option
+#       echo "Commit to $(git rev-parse --show-toplevel) on $(date):" >> ~/.gitcommitlog 
+#       cat $(git rev-parse --git-dir)/COMMIT_EDITMSG >> ~/.gitcommitlog
+#     fi
+#   else 
+#     command git "$@"
+#   fi
+# }
 
 alias tmux="tmux -2"
 alias omux="tmux a -t 0"
@@ -43,3 +43,6 @@ alias ....="cd ../../.."
 alias ll="ls -alh --color=auto"
 alias pbcopy="xclip -selection clipboard'
 alais pbpaste="xclip -selection clipboard -o'
+alias lxc-ls="lxc-ls --fancy"
+
+alias openv="openconnect -c ~/.ssh/${VPN_PEM}.pem https://${VPN}.vivint.com/"
