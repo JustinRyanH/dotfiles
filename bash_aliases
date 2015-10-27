@@ -45,4 +45,4 @@ alias pbcopy="xclip -selection clipboard'
 alais pbpaste="xclip -selection clipboard -o'
 alias lxc-ls="lxc-ls --fancy"
 
-alias openv="openconnect -c ~/.ssh/${VPN_PEM}.pem https://${VPN}.vivint.com/"
+alias openv="openconnect -c ~/.ssh/${VPN_PEM}.pem https://vpn.${VPN}/"

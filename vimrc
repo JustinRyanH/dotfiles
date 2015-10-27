@@ -26,6 +26,8 @@ Plugin 'scrooloose/nerdtree'
 
 Plugin 'rust-lang/rust.vim'
 Plugin 'racer-rust/vim-racer'
+Plugin 'scrooloose/syntastic'
+Plugin 'airblade/vim-gitgutter'
 
 
 
