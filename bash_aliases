@@ -41,8 +41,8 @@ alias ...="cd ../../"
 alias ....="cd ../../.."
 
 alias ll="ls -alh --color=auto"
-alias pbcopy="xclip -selection clipboard'
-alais pbpaste="xclip -selection clipboard -o'
+alias pbcopy="xclip -selection clipboard"
+alias pbpaste="xclip -selection clipboard -o"
 alias lxc-ls="lxc-ls --fancy"
 
 alias openv="openconnect -c ~/.ssh/${VPN_PEM}.pem https://vpn.${VPN}/"
