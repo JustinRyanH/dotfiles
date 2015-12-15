@@ -1,0 +1,27 @@
+if [ -f `brew --prefix`/etc/bash_completion.d/git-prompt.sh ]; then
+    . `brew --prefix`/etc/bash_completion.d/git-prompt.sh
+fi
+
+export NVM_DIR=~/.nvm
+. $(brew --prefix nvm)/nvm.sh
+
+if [ -a ${HOME}/.bash_aliases ]; then
+  . ${HOME}/.bash_aliases
+fi
+
+export PIP_REQUIRE_VIRTUALENV=true
+export DEFAULT_VIRTUALENV_DIR="${HOME}/Virtualenvs"
+
+gpip(){
+  PIP_REQUIRE_VIRTUALENV="" pip "$@"
+}
+
+vpee(){
+  if [ -n "$1" ] && [ -f "${DEFAULT_VIRTUALENV_DIR}/$1/bin/activate" ]; then
+    source ${DEFAULT_VIRTUALENV_DIR}/$1/bin/activate 
+  else
+    echo "Requires the name of the virtual enviornment and for the virtual enviornment to exists"
+  fi
+}
+
+alias workoff='deactivate'
