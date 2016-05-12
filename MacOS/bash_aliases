@@ -1,4 +1,4 @@
-export PATH=~/bin:$PATH
+export PATH=~/.bin:$PATH
 export EDITOR=vim
 alias repoclean='sudo echo "Cleaning with 8 threads"; repo forall -j8 -p -c sudo git clean -xqdf'
 
@@ -39,7 +39,6 @@ alias ..="cd ../"
 alias ...="cd ../../"
 alias ....="cd ../../.."
 
-alias ll="ls -alh"
+alias ll="ls -alhG"
 alias cls="clear"
-alias pbcopy="xclip -selection clipboard"
-alias pbpaste="xclip -selection clipboard -o"
+export LSCOLORS=gxBxhxDxfxhxhxhxhxcxcx

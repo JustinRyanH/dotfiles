@@ -24,6 +24,10 @@ Plugin 'majutsushi/tagbar'
 Plugin 'kien/ctrlp.vim'
 Plugin 'scrooloose/nerdtree'
 
+Plugin 'vim-scripts/ZoomWin'
+
+Plugin 'rking/ag.vim'
+Plugin 'saltstack/salt-vim'
 Plugin 'rust-lang/rust.vim'
 Plugin 'racer-rust/vim-racer'
 Plugin 'scrooloose/syntastic'
@@ -40,6 +44,7 @@ if !exists('g:airline_symbols')
 endif
 let g:airline_symbols.space = "\ua0"
 
+syntax on
 set tabstop=2
 set shiftwidth=2
 set expandtab
@@ -52,9 +57,8 @@ let g:go_highlight_build_constraints = 1
 
 set hidden
 
-let g:racer_cmd = "/home/justin/Tools/racer/target/release/racer"
+let g:racer_cmd = "/home/justin/.bin/racer"
 let $RUST_SRC_PATH = "/usr/local/src/rust/src"
 au BufRead,BufNewFile *.rs set filetype=rust
 
 source ~/.vimrc.custom
-
