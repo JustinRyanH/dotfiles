@@ -14,6 +14,7 @@
   (evil-define-key 'normal dired-mode-map "N" 'evil-search-previous)
   (evil-define-key 'normal dired-mode-map "q" 'kill-this-buffer)
   (evil-define-key 'normal dired-mode-map "R" 'dired-do-rename)
+  (evil-define-key 'normal dired-mode-map "G" 'evil-goto-line)
   )
 
 (defun my-dired-up-directory ()

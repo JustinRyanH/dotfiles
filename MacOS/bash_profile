@@ -14,7 +14,7 @@ if [ -a ${HOME}/.bash_spacemonkey ]; then
 fi
 
 export PIP_REQUIRE_VIRTUALENV=true
-export DEFAULT_VIRTUALENV_DIR="${HOME}/Virtualenvs"
+export DEFAULT_VIRTUALENV_DIR="${HOME}/.virtualenvs"
 
 gpip(){
   PIP_REQUIRE_VIRTUALENV="" pip "$@"
@@ -30,7 +30,9 @@ vpee(){
 
 alias workoff='deactivate'
 
+export WORKON_HOME=$HOME/.virtualenvs
+source /usr/local/bin/virtualenvwrapper.sh
 
 PATH=${HOME}/.cargo/bin:${PATH}
 
-export PS1="\H \w :> "
+export PS1="\H@\w :> "

@@ -14,7 +14,7 @@
     (evil-leader/set-key "h" 'dired-jump)
     (evil-leader/set-key "v" 'split-window-right)
     (evil-leader/set-key "," 'other-window)
-    (evil-leader/set-key "b" 'ibuffer)
+    (evil-leader/set-key "B" 'ibuffer)
     )
   )
 
@@ -33,5 +33,6 @@
     (define-key evil-normal-state-map (kbd "J") 'pop-tag-mark)
     )
   )
+;; Handle Powerline Task
 
 (provide 'my-evil)
