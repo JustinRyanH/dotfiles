@@ -5,6 +5,8 @@
 (setq inhibit-splash-screen t
       inhibit-startup-echo-area-message t
       inhibit-startup-message t)
+(when (memq window-system '(mac ns))
+  (exec-path-from-shell-initialize))
 
 ;; File Backups to One locations
 (setq backup-directory-alist
@@ -17,12 +19,11 @@
                          ("org" . "http://orgmode.org/elpa/")
                          ("gnu" . "http://elpa.gnu.org/packages/")))
 
+(add-hook 'before-save-hook 'delete-trailing-whitespace)
 (unless (package-installed-p 'use-package)
   (package-refresh-contents)
   (package-install 'use-package))
 (require 'use-package)
-(when (memq window-system '(mac ns))
-  (exec-path-from-shell-initialize))
 
 (tool-bar-mode -1)
 
@@ -46,7 +47,6 @@
 (require 'my-golang)
 (require 'my-rust)
 (require 'my-python)
-
 
 ;; Term Hooks
 (add-hook 'term-mode-hook

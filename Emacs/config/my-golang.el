@@ -14,5 +14,5 @@
 
 
 (evil-define-key 'normal go-mode-map (kbd "K") 'godef-jump)
-
+(evil-leader/set-key "k" 'godef-jump-other-window)
 (provide 'my-golang)

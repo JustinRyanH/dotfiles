@@ -20,7 +20,7 @@
     ;;   "j" 'magit-go-forward
     ;;   "k" 'magit-go-backward
     ;;   "q" 'kill-buffer)
-    ;; )
+     )
     )
   (use-package evil-magit
     :ensure evil-magit
