@@ -33,6 +33,7 @@ alias workoff='deactivate'
 export WORKON_HOME=$HOME/.virtualenvs
 source /usr/local/bin/virtualenvwrapper.sh
 
-PATH=${HOME}/.cargo/bin:${PATH}
+#PATH=${HOME}/.cargo/bin:${PATH}
+PATH=/Users/justin/.cargo/bin:/Users/justin/.bin:/Users/justin/.nvm/v0.10.36/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/go/bin:/operations/bin:/Users/justin/Work/katamari/devtools/bin:/Users/justin/Work/katamari/go/bin
 
 export PS1="\H@\w :> "

@@ -30,6 +30,8 @@
 ;; Setup the theme
 (load-theme 'idea-darkula t)
 
+(setq js-indent-level 2)
+(setq css-indent-offset 2)
 (require 'thingatpt)
 (require 'my-company)
 (require 'my-evil)
