@@ -1,0 +1,13 @@
+(source gnu)
+(source melpa)
+
+(depends-on "exec-path-from-shell")
+(depends-on "evil")
+(depends-on "evil-leader")
+
+(depends-on "company")
+(depends-on "company-quickhelp")
+
+(depends-on "ag")
+(depends-on "markdown-mode")
+

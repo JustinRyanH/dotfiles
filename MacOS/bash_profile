@@ -28,6 +28,7 @@ vpee(){
   fi
 }
 
+alias emacs="/usr/local/Cellar/emacs-plus/24.5/Emacs.app/Contents/MacOS/Emacs -nw"
 alias workoff='deactivate'
 
 export WORKON_HOME=$HOME/.virtualenvs
