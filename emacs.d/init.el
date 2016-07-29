@@ -9,6 +9,7 @@
 (when (memq window-system '(mac ns))
     (exec-path-from-shell-initialize))
 
+(require 'init/appearance)
 (require 'init/essential)
 (require 'init/search)
 

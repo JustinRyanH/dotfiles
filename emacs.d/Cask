@@ -1,6 +1,8 @@
 (source gnu)
 (source melpa)
 
+(depends-on "powerline")
+
 (depends-on "exec-path-from-shell")
 (depends-on "evil")
 (depends-on "evil-leader")
