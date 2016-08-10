@@ -4,11 +4,20 @@
 (setq auto-save-file-name-transforms
 	`((".*" ,temporary-file-directory t)))
 
+;; Clean whitespace on empty line
+(add-hook 'before-save-hook 'delete-trailing-whitespace)
+
+;; Tabs instead of spaces
+(setq-default indent-tabs-mode nil)
+(require 'flycheck)
 (require 'dired-x)
 (require 'evil)
 (require 'evil-leader)
+(setq flycheck-global-modes '(not html-mode))
+(global-flycheck-mode)
 (global-evil-leader-mode)
 (evil-mode 1)
+
 
 ;;
 ;; Set up Global leaders
@@ -22,17 +31,18 @@
 
 ;;
 ;; Global Evil movement
-;; 
+;;
 (eval-after-load "evil-mode"
   (progn
     (define-key evil-normal-state-map (kbd "C-h") 'evil-window-left)
     (define-key evil-normal-state-map (kbd "C-l") 'evil-window-right)
     (define-key evil-normal-state-map (kbd "C-k") 'evil-window-up)
     (define-key evil-normal-state-map (kbd "C-j") 'evil-window-down)
+    (define-key evil-normal-state-map (kbd "J") 'pop-tag-mark)
     )
   )
 
-;; 
+;;
 ;; Set up Dired evil movement
 ;;
 (progn
@@ -49,6 +59,7 @@
   (evil-define-key 'normal dired-mode-map "q" 'kill-this-buffer)
   (evil-define-key 'normal dired-mode-map "R" 'dired-do-rename)
   (evil-define-key 'normal dired-mode-map "G" 'evil-goto-line)
+  (evil-define-key 'normal dired-mode-map "J" 'pop-tag-mark)
   )
 
 (defun my-dired-up-directory ()
@@ -70,7 +81,6 @@
        (kbd "t") 'ibuffer-toggle-marks
        (kbd "u") 'ibuffer-unmark-forward
        (kbd "=") 'ibuffer-diff-with-file
-       (kbd "J") 'ibuffer-jump-to-buffer
        (kbd "M-g") 'ibuffer-jump-to-buffer
        (kbd "M-s a C-s") 'ibuffer-do-isearch
        (kbd "M-s a M-C-s") 'ibuffer-do-isearch-regexp

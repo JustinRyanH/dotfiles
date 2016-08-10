@@ -1,0 +1,3 @@
+[submodule "emacs.d/hangups.el"]
+	path = emacs.d/hangups.el
+	url = https://github.com/jtamagnan/hangups.el

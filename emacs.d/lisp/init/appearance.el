@@ -6,6 +6,13 @@
       inhibit-startup-message t)
 
 (require 'powerline)
+
+(load-theme 'labburn t)
+(set-face-attribute 'mode-line nil
+                    :foreground "white"
+                    :background "DarkOrange"
+                    :box nil)
+(setq powerline-arrow-shape 'curve)
 (progn
   (powerline-center-evil-theme)
   )
