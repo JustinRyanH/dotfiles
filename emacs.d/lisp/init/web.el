@@ -3,7 +3,7 @@
 (setq css-indent-offset 2)
 
 (evil-leader/set-key-for-mode 'tide-mode "d" 'tide-documentation-at-point)
-(evil-define-key 'normal go-mode-map (kbd "K") 'tide-jump-to-definition)
+(evil-define-key 'normal tile-mode-map (kbd "K") 'tide-jump-to-definition)
 
 (defun setup-tide-mode ()
   (interactive)
