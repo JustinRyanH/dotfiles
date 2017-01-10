@@ -42,3 +42,6 @@ alias ....="cd ../../.."
 alias ll="ls -alhG"
 alias cls="clear"
 export LSCOLORS=gxBxhxDxfxhxhxhxhxcxcx
+alias tmux="tmux -CC attach || tmux -CC"
+
+alias ag='\ag --pager="less -XFR"'

@@ -58,7 +58,7 @@ let g:go_highlight_build_constraints = 1
 set hidden
 
 let g:racer_cmd = "/home/justin/.bin/racer"
-let $RUST_SRC_PATH = "/usr/local/src/rust/src"
+let $RUST_SRC_PATH = "/usr/local/rust/src"
 au BufRead,BufNewFile *.rs set filetype=rust
 
 source ~/.vimrc.custom
