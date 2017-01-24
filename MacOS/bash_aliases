@@ -44,4 +44,4 @@ alias cls="clear"
 export LSCOLORS=gxBxhxDxfxhxhxhxhxcxcx
 alias tmux="tmux -CC attach || tmux -CC"
 
-alias ag='\ag --pager="less -XFR"'
+alias ag='\ag --path-to-ignore ~/.agignore --pager="less -XFR"'
