@@ -36,44 +36,6 @@ fi
 export PIP_REQUIRE_VIRTUALENV=true
 export DEFAULT_VIRTUALENV_DIR="${HOME}/.virtualenvs"
 
-gpip(){
-  PIP_REQUIRE_VIRTUALENV="" pip "$@"
-}
-
-vpee(){
-  if [ -n "$1" ] && [ -f "${DEFAULT_VIRTUALENV_DIR}/$1/bin/activate" ]; then
-    source ${DEFAULT_VIRTUALENV_DIR}/$1/bin/activate 
-  else
-    echo "Requires the name of the virtual enviornment and for the virtual enviornment to exists"
-  fi
-}
-
-alias emacs="/usr/local/Cellar/emacs-plus/24.5/Emacs.app/Contents/MacOS/Emacs -nw"
-alias workoff='deactivate'
-
-export WORKON_HOME=$HOME/.virtualenvs
-source /usr/local/bin/virtualenvwrapper.sh
-
 #PATH=${HOME}/.cargo/bin:${PATH}
 PATH=/Users/justin/.cargo/bin:/Users/justin/.bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/go/bin:/operations/bin:/Users/justin/Work/katamari/devtools/bin:/Users/justin/Work/katamari/go/bin
 PATH=$PATH:/Users/justin/.nvm/versions/node/v4.5.0/bin
-
-export PS1="\H@\w :> "
-
-test -e "${HOME}/.iterm2_shell_integration.bash" && source "${HOME}/.iterm2_shell_integration.bash"
-if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
-
-code () {
-    if [[ $# = 0 ]]
-    then
-        open -a "Visual Studio Code"
-    else
-        [[ $1 = /* ]] && F="$1" || F="$PWD/${1#./}"
-        open -a "Visual Studio Code" --args "$F"
-    fi
-}
-
-
-GOROOT=/usr/local/go
-export HOMEBREW_GITHUB_API_TOKEN="0a5d7a445bed30847fcb5fa7de3fcb51c26cb1bb"
-export OTHERGO="/Users/justin/Src/go"

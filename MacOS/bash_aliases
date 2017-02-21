@@ -14,3 +14,13 @@ alias cls="clear"
 alias tmux="tmux -CC attach || tmux -CC"
 
 alias ag='\ag --path-to-ignore ~/.agignore --pager="less -XFR"'
+
+code () {
+    if [[ $# = 0 ]]
+    then
+        open -a "Visual Studio Code"
+    else
+        [[ $1 = /* ]] && F="$1" || F="$PWD/${1#./}"
+        open -a "Visual Studio Code" --args "$F"
+    fi
+}
