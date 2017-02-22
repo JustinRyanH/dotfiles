@@ -14,23 +14,14 @@ call vundle#begin()
 
 " let Vundle manage Vundle, required
 Plugin 'gmarik/Vundle.vim'
-Plugin 'Valloric/YouCompleteMe'
-Plugin 'fatih/vim-go'
 Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'edkolev/tmuxline.vim'
 Plugin 'tpope/vim-fugitive'
 Plugin 'bling/vim-airline'
 Plugin 'majutsushi/tagbar'
 Plugin 'kien/ctrlp.vim'
-Plugin 'scrooloose/nerdtree'
-
-Plugin 'vim-scripts/ZoomWin'
 
 Plugin 'rking/ag.vim'
-Plugin 'saltstack/salt-vim'
-Plugin 'rust-lang/rust.vim'
-Plugin 'racer-rust/vim-racer'
-Plugin 'scrooloose/syntastic'
 Plugin 'airblade/vim-gitgutter'
 
 
@@ -48,17 +39,5 @@ syntax on
 set tabstop=2
 set shiftwidth=2
 set expandtab
-
-let g:go_highlight_functions = 1
-let g:go_highlight_methods = 1
-let g:go_highlight_structs = 1
-let g:go_highlight_operators = 1
-let g:go_highlight_build_constraints = 1
-
-set hidden
-
-let g:racer_cmd = "/home/justin/.bin/racer"
-let $RUST_SRC_PATH = "/usr/local/rust/src"
-au BufRead,BufNewFile *.rs set filetype=rust
 
 source ~/.vimrc.custom
