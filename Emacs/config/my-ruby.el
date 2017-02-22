@@ -1,2 +1,0 @@
-
-(provide 'my-ruby)
