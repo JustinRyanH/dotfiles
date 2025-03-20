@@ -113,6 +113,7 @@
   # $ nix search wget
   environment.systemPackages = with pkgs; [
 	clang
+	direnv
 	discord
 	freecad
 	gh
@@ -131,14 +132,18 @@
   #   enableSSHSupport = true;
   # };
   programs.neovim = {
-  	enable = true;
-	defaultEditor = true;
+    enable = true;
+    defaultEditor = true;
   };
 
   programs.steam = {
-  	enable = true;
-	remotePlay.openFirewall = true;
-	dedicatedServer.openFirewall = true;
+    enable = true;
+    remotePlay.openFirewall = true;
+    dedicatedServer.openFirewall = true;
+  };
+  programs.direnv = {
+    enable = true;
+    enableZshIntegration = true;
   };
 
   # List services that you want to enable:
