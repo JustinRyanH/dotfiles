@@ -80,7 +80,7 @@
 
   users.defaultUserShell = pkgs.zsh;
   # Define a user account. Don't forget to set a password with ‘passwd’.
-  users.users.justinh = {
+  users.users.jh = {
     isNormalUser = true;
     description = "Justin Hurstwright";
     extraGroups = [ "networkmanager" "wheel" ];
@@ -92,14 +92,8 @@
     useDefaultShell = true;
   };
 
-  home-manager.users.justinh = { pkgs, ... }: {
-  	home.packages = [ pkgs.atool pkgs.httpie ];
-	home.stateVersion = "24.11";
-  };
-
   # Enable automatic login for the user.
-  services.displayManager.autoLogin.enable = true;
-  services.displayManager.autoLogin.user = "justinh";
+  services.displayManager.autoLogin.user = "jh";
 
   # Workaround for GNOME autologin: https://github.com/NixOS/nixpkgs/issues/103746#issuecomment-945091229
   systemd.services."getty@tty1".enable = false;
