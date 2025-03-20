@@ -81,5 +81,8 @@
 		ci = "commit";
 		st = "status";
 	};
+	ignores = [
+		"*.swp"
+	];
   };
 }
