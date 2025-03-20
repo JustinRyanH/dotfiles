@@ -76,6 +76,8 @@
 
   programs.git = {
   	enable = true;
+	userName = "Justin Hurstwright";
+	userEmail = "jryanhurst@gmail.com";
   	aliases = {
 		co = "checkout";
 		ci = "commit";
