@@ -113,12 +113,14 @@
   # $ nix search wget
   environment.systemPackages = with pkgs; [
 	clang
-  	freecad
 	discord
+	freecad
+	gh
+	git
+	unzip
 	warp-terminal
 	wget
-	git
-	gh
+	zip
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
