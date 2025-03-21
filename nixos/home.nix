@@ -34,6 +34,7 @@
     # (pkgs.writeShellScriptBin "my-hello" ''
     #   echo "Hello, ${config.home.username}!"
     # '')
+    pkgs.oh-my-zsh
   ];
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
@@ -86,5 +87,13 @@
 	ignores = [
 		"*.swp"
 	];
+  };
+
+  programs.zsh= {
+    enable = true;
+    oh-my-zsh = {
+      enable = true;
+      plugins = ["git"];
+    };
   };
 }
