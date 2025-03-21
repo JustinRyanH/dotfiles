@@ -112,16 +112,17 @@
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
-	clang
-	direnv
-	discord
-	freecad
-	gh
-	git
-	unzip
-	warp-terminal
-	wget
-	zip
+    clang
+    direnv
+    discord
+    freecad
+    gh
+    git
+    git-lfs
+    unzip
+    warp-terminal
+    wget
+    zip
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
