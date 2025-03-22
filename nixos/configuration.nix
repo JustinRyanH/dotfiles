@@ -112,6 +112,7 @@
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
+    cargo
     clang
     direnv
     discord
@@ -119,6 +120,8 @@
     gh
     git
     git-lfs
+    rustc
+    spotify
     unzip
     warp-terminal
     wget
