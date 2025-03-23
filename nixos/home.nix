@@ -76,17 +76,18 @@
   programs.home-manager.enable = true;
 
   programs.git = {
-  	enable = true;
-	userName = "Justin Hurstwright";
-	userEmail = "jryanhurst@gmail.com";
-  	aliases = {
-		co = "checkout";
-		ci = "commit";
-		st = "status";
-	};
-	ignores = [
-		"*.swp"
-	];
+    enable = true;
+    userName = "Justin Hurstwright";
+    userEmail = "jryanhurst@gmail.com";
+    aliases = {
+      co = "checkout";
+      ci = "commit";
+      st = "status";
+    };
+    ignores = [
+      "*.swp"
+      ".direnv/"
+    ];
   };
 
   programs.zsh= {
