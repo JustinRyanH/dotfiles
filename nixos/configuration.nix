@@ -120,6 +120,8 @@
     gh
     git
     git-lfs
+    lazygit
+    ripgrep
     rustc
     spotify
     unzip
